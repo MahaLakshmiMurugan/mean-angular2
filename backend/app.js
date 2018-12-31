@@ -12,9 +12,9 @@ mongoose.connect("mongodb+srv://test_user:ooIWEe9lOOkBDtUG@cluster0-01bs7.mongod
 .then(() => {
     console.log("Connected to database!");
   })
-  .catch(() => {
-    console.log("Connection failed!");
-  });
+  .catch((error) => {
+    console.log("Connection failed!", error);
+  }); 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
